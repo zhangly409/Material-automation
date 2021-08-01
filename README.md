@@ -1,7 +1,7 @@
 # Material-automation
 ## Development
 ```
-npm i  // 安装前端依赖
-npm install  // 启动前端服务
+npm install  // 安装前端依赖
+npm run serve  // 启动前端服务
 
 ```
