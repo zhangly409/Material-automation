@@ -264,6 +264,15 @@ export default {
   methods: {
     handleSubmitIncrement() {
       console.log(this.incrementUnit)
+      let url = '/api'
+      this.$axios.get(url, {
+        params:{
+          startTime: this.incrementUnit.startTime,
+          endTime: this.incrementUnit.endTime
+        }
+      }).then(
+        response => (this.incrementUnit.result = response.data.data)
+      )
     },
     handleSubmitMaterial() {
       console.log(this.materialUnit)
