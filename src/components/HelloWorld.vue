@@ -271,7 +271,14 @@ export default {
           endTime: this.incrementUnit.endTime
         }
       }).then(
-        response => (this.incrementUnit.result = response.data.data)
+        response => {
+          this.incrementUnit.result = response.data.data
+          // 实现增量单元查询的结果list的第一个元素填充到至单元物料解析的表单
+          let resultListFirst = this.incrementUnit.result[0]
+          this.materialUnit.id = resultListFirst.id
+          this.materialUnit.seriaLNum = resultListFirst.seriaLNum
+          this.materialUnit.environment = resultListFirst.environment
+        }
       )
     },
     handleSubmitMaterial() {
