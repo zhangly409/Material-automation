@@ -1,4 +1,4 @@
-# hello-world
+# Material automation
 
 ## Project setup
 ```
